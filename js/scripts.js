@@ -2,24 +2,33 @@ $(document).ready(function() {
   $('#formy').submit(function(event) {
     event.preventDefault();
 
-    var originalArray = $('#sentence').val();
-    console.log(originalArray);
-    var wow = originalArray.split(' ');
-    // var originalArray = $('#sentence').split(' ');
+    var stuff = $('#sentence').val();
+    console.log(stuff);
+    var originalArray = stuff.split(' ');
+    console.log(originalArray)
 
-    // console.log("original Array",originalArray[1])
-    console.log('wow',wow);
 
-    var threeLetterArray = []
-    threeLetterArray = wow.map(function(word) {
-      word.length > 3 ? threeLetterArray.push(word) : null;
-      
-      return threeLetterArray;
-      // word.length > 3 ? console.log('woopwoop!'): console.log('boooo');
-      // return console.log(word.length) 
+    var threeLetterArray = [];
+
+    originalArray.forEach(function(word) {
+      if(word.length >= 3) {
+        threeLetterArray.push(word);
+      }
     });
-      return console.log(threeLetterArray)
+    console.log(threeLetterArray)
+    // // var originalArray = $('#sentence').split(' ');
 
-    // threeLetterArray();
+    // // console.log("original Array",originalArray[1])
+    // console.log('wow',wow);
+
+    // var threeLetterArray = []
+    // threeLetterArray = wow.map(function(word) {
+    //   word.length > 3 ? threeLetterArray.push(word) : null;
+      
+    //   return threeLetterArray;
+    //   // word.length > 3 ? console.log('woopwoop!'): console.log('boooo');
+    //   // return console.log(word.length) 
+    
+     
   });
 });
