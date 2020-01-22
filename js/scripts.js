@@ -4,18 +4,32 @@ $(document).ready(function() {
 
     var stuff = $('#sentence').val();
     console.log(stuff);
-    var originalArray = stuff.split(' ');
-    console.log(originalArray)
+    var words = stuff.split(' ');
+    console.log(words)
 
 
     var threeLetterArray = [];
-
-    originalArray.forEach(function(word) {
-      if(word.length >= 3) {
-        threeLetterArray.push(word);
+    for (var index = 0; index <= words.length-1; index += 1) {
+  
+      if(words[index].length >= 3) {
+        threeLetterArray.push(words[index]);
       }
-    });
+      
+    }
+
+
+    // words.forEach(function(word) {
+    //   if(word.length >= 3) {
+    //     threeLetterArray.push(word);
+    //   }
+     
+      
+    // });
     console.log(threeLetterArray)
+
+
+
+
     // // var originalArray = $('#sentence').split(' ');
 
     // // console.log("original Array",originalArray[1])
